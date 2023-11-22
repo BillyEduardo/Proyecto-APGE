@@ -1,10 +1,13 @@
 package usuario;
 
-abstract class Usuario {
+abstract class Usuario implements InformacionUsuario , Autentificacion {
 
 	
 	String nombre;
-	int id;
 	String correo;
+	String password;
+	String rol;
+	int id;
+	
 }
 
