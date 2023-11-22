@@ -4,6 +4,8 @@ public class Estudiante extends Usuario{
 
 	int Calificacion;
 
+
+	
 	@Override
 	public void ObtenerInformacion() {
 		
