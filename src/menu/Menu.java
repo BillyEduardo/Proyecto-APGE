@@ -8,6 +8,8 @@ import javax.swing.JTextField;
 import javax.swing.JLabel;
 import java.awt.Color;
 import java.awt.Font;
+import javax.swing.JScrollBar;
+import javax.swing.JComboBox;
 
 public class Menu {
 
@@ -48,11 +50,11 @@ public class Menu {
 		frame.getContentPane().setLayout(null);
 		
 		JButton btnNewButton = new JButton("Log in");
-		btnNewButton.setBounds(173, 156, 89, 23);
+		btnNewButton.setBounds(173, 193, 89, 23);
 		frame.getContentPane().add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Sign in ");
-		btnNewButton_1.setBounds(173, 190, 89, 23);
+		btnNewButton_1.setBounds(173, 227, 89, 23);
 		frame.getContentPane().add(btnNewButton_1);
 		
 		textField = new JTextField();
@@ -79,5 +81,14 @@ public class Menu {
 		lblNewLabel_2.setFont(new Font("Microsoft JhengHei", Font.PLAIN, 18));
 		lblNewLabel_2.setBounds(184, 11, 53, 23);
 		frame.getContentPane().add(lblNewLabel_2);
+		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setBounds(151, 166, 125, 22);
+		frame.getContentPane().add(comboBox);
+		
+		JLabel lblNewLabel_3 = new JLabel("Rol");
+		lblNewLabel_3.setForeground(new Color(192, 192, 192));
+		lblNewLabel_3.setBounds(151, 152, 46, 14);
+		frame.getContentPane().add(lblNewLabel_3);
 	}
 }
