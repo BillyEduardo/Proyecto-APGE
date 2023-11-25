@@ -1,4 +1,4 @@
-package usuario;
+package Materia;
 
 public class Materia {
 
