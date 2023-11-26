@@ -1,5 +1,9 @@
 package usuario;
 
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
+
 abstract class Usuario implements InformacionUsuario , Autentificacion {
 
 	
@@ -11,6 +15,10 @@ abstract class Usuario implements InformacionUsuario , Autentificacion {
 	
 	//Getters y setters
 	public void setNombre() {
+		Scanner entry = new Scanner(System.in);
+		String nombre;
+		nombre = entry.nextLine();
+		this.nombre = nombre;
 		
 	}
 	
@@ -20,7 +28,10 @@ abstract class Usuario implements InformacionUsuario , Autentificacion {
 	}
 	
 	public void setCorreo() {
-		
+		Scanner entry = new Scanner(System.in);
+		String correo;
+		correo = entry.nextLine();
+		this.correo = correo;
 	}
 	
 	public String getCorreo() {
@@ -28,6 +39,10 @@ abstract class Usuario implements InformacionUsuario , Autentificacion {
 	}
 	
 	public void setPassword() {
+		Scanner entry = new Scanner (System.in);
+		String password;
+		password = entry.nextLine();
+		this.password = password;
 		
 	}
 	
@@ -37,6 +52,10 @@ abstract class Usuario implements InformacionUsuario , Autentificacion {
 	}
 	
 	public void setRol() {
+		Scanner entry = new Scanner(System.in);
+		String rol;
+		rol = entry.nextLine();
+		this.rol = rol;
 		
 	}
 	
@@ -44,11 +63,28 @@ abstract class Usuario implements InformacionUsuario , Autentificacion {
 		
 		return rol;
 	}
+	
+	public void setID() {
+		Random random = new Random();
+		int id = random.nextInt(8999) + 1000;
+		this.id = id;
+	}
+	
+	public int getID() {
+		
+		return id;
+	}
 	//Fin de getter y setters
+	
 	//---
+	
 	//Agregar usuario
 	
-	public void agregarUsuario() {}
+	public void agregarUsuario() {
+		
+		
+		
+	}
 }
 
 

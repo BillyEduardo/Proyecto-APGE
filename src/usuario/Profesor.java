@@ -4,6 +4,7 @@ public class Profesor extends Usuario{
 	
 	String Especialidad;
 
+	
 	@Override
 	public void ObtenerInformacion() {
 			
