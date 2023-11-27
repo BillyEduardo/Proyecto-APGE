@@ -104,7 +104,7 @@ public class Frame extends JFrame {
         btnLogIn.setBounds(83, 307, 194, 37);
         contentPane.add(btnLogIn);
         
-        JLabel lblNewLabel_4 = new JLabel("APGE SIEMPRE AL SERVICIO");
+        JLabel lblNewLabel_4 = new JLabel("APGE ALWAYS FOR YOU");
         lblNewLabel_4.setForeground(new Color(255, 255, 255));
         lblNewLabel_4.setBounds(102, 426, 175, 27);
         contentPane.add(lblNewLabel_4);
