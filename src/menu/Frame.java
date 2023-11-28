@@ -50,7 +50,7 @@ public class Frame extends JFrame {
         setContentPane(contentPane);
         contentPane.setLayout(null);
 
-        JLabel lblNewLabel = new JLabel("Username");
+        JLabel lblNewLabel = new JLabel("Email");
         lblNewLabel.setForeground(new Color(255, 182, 83));
         lblNewLabel.setFont(new Font("Yu Gothic Light", Font.BOLD, 17));
         lblNewLabel.setBounds(40, 127, 85, 27);
@@ -76,6 +76,16 @@ public class Frame extends JFrame {
         btnNewButton.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 17));
         btnNewButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+            	
+                // Crear una instancia del formulario de registro
+                registro registroForm = new registro();
+
+                // Hacer visible el formulario de registro
+                registroForm.setVisible(true);
+                
+            
+                
+                
             }
         });
         btnNewButton.setForeground(new Color(255, 255, 255));
@@ -106,7 +116,7 @@ public class Frame extends JFrame {
         
         JLabel lblNewLabel_4 = new JLabel("APGE ALWAYS FOR YOU");
         lblNewLabel_4.setForeground(new Color(255, 255, 255));
-        lblNewLabel_4.setBounds(102, 426, 175, 27);
+        lblNewLabel_4.setBounds(116, 426, 146, 27);
         contentPane.add(lblNewLabel_4);
         
         JLabel lblNewLabel_5 = new JLabel("¿Don't have an account? ");
