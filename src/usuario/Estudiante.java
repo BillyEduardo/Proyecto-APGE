@@ -3,20 +3,12 @@ package usuario;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Estudiante extends Usuario{
+public class Estudiante extends Usuario {
 
 	int Calificacion;
 	String Carrera;
 		
-	public void setCarrera() {
-		Scanner entry = new Scanner(System.in);
-		String Carrera = entry.nextLine();
-		this.Carrera = Carrera;
-	}
 	
-	public String getCarrera() {
-		return Carrera;
-	}
 	
 	//Agregar estudiante
 	public void agregarEstudiante() {
@@ -26,10 +18,8 @@ public class Estudiante extends Usuario{
 		super.setCorreo();
 		System.out.print("Agregue un password: ");
 		super.setPassword();
-		System.out.println("Matricula: ");
+		System.out.print("Matricula: ");
 		super.setID();
-		System.out.print("Carrera: ");
-		setCarrera();
 		
 		
 	}
@@ -42,7 +32,7 @@ public class Estudiante extends Usuario{
 		System.out.println(" ");
 		System.out.print("Matricula: "+super.getID());
 		System.out.println(" ");
-		System.out.print("Carrera "+getCarrera());
+		
 		
 		
 	}
