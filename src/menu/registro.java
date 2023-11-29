@@ -1,11 +1,15 @@
 package menu;
-
+import java.sql.Connection;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -78,6 +82,23 @@ public class registro extends JFrame {
         btnNewButton.setFont(new Font("Yu Gothic UI Semibold", Font.BOLD, 17));
         btnNewButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+            	 try {
+                     // Ruta a la base de datos 
+                     String url = "jdbc:mysql://localhost:3306/apgee";
+                   
+                     Class.forName("com.mysql.cj.jdbc.Driver");
+
+                     // Establecer la conexión
+                     Connection conexión = DriverManager.getConnection(url);
+                 	 Statement statement = conexión.createStatement();
+                        	 
+                 	 String nombre = textField.getText(), email = textField_1.getText(), contraseña =textField_2.getText();
+             		 statement.executeUpdate("insert into usuario (nombre) values ('"+nombre+"'), insert into usuario (email) values ('"+email+"'), insert into usuario (contraseña) values ('"+contraseña+"')");
+                    conexión.close();
+                 } catch (ClassNotFoundException e1) {
+                     e1.printStackTrace();
+                 }catch (SQLException e1) {
+                	 e1.printStackTrace();}
             }
         });
         btnNewButton.setForeground(new Color(255, 255, 255));
